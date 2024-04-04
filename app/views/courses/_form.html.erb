@@ -1,0 +1,21 @@
+<%= form_with model: @course do |f| %>
+    <p>
+        <%= f.label :title, "title" %>
+        <%= f.text_field :title, placeholder: "Enter title" %>
+    </p>
+
+    <p>
+        <%= f.label :room_number, "Room number" %>
+        <%= f.text_field :room_number, placeholder: "Enter room number" %>
+    </p>
+
+    <p>
+        <%= f.label :description, "description" %>
+        <%= f.text_area :description, placeholder: "Description" %>
+    </p>
+
+    <%= f.submit %>
+
+<% end %>
+
+<%= link_to "cancel", courses_path %>

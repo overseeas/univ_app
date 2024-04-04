@@ -1,12 +1,9 @@
 <h1>Course Listing</h1>
 
-<% @courses.each do |course| %>
-    <p>
-        Room number:
-        <%= course.room_number %> <br>
-        Title:
-        <%= course.title %> <br>
-        Description:
-        <%= course.description %>
+<%= render "course" %>
 
-<% end %>
+<%= link_to "New course", new_course_path %>
+
+<p>
+    <%= link_to "Students page", students_path %>
+</p>
