@@ -3,16 +3,10 @@
 <% @courses.each do |course| %>
     <p>
         Room number:
-        <%= course.room_number %>
-    </p>
-
-    <p>
+        <%= course.room_number %> <br>
         Title:
-        <%= course.title %>
-    </p>
-
-    <p>
+        <%= course.title %> <br>
         Description:
         <%= course.description %>
-    </p>
+
 <% end %>
