@@ -4,10 +4,15 @@
     <p>
         Name:
         <%= student.name %> 
-        <%= student.occupation %> <br>
+        <strong><%= student.occupation %></strong> <br>
 
         Email:
-        <%= student.email %>
+        <%= student.email %> <br>
+
+        <%= link_to "VIEW PROFILE", student %>
     </p>
 
 <% end %>
+
+<%= link_to "New student", new_student_path %>
+<%= link_to "Courses", courses_path %>

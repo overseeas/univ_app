@@ -1,1 +1,17 @@
 <h1><%= @student.name %></h1>
+<h4><%= @student.email %></h2>
+
+<% @student.courses.each do |course| %>
+    <%= course %>
+<% end %>
+
+<ul>
+    <li>
+        <%= link_to "Edit profile", edit_student_path %>
+    </li>
+    <li>
+        <%= link_to "Destroy", student_path, data: { turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
+    </li>
+</p>
+
+<%= link_to "Back to listing page", students_path %>
