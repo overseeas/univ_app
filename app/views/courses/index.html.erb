@@ -1,0 +1,18 @@
+<h1>Course Listing</h1>
+
+<% @courses.each do |course| %>
+    <p>
+        Room number:
+        <%= course.room_number %>
+    </p>
+
+    <p>
+        Title:
+        <%= course.title %>
+    </p>
+
+    <p>
+        Description:
+        <%= course.description %>
+    </p>
+<% end %>
