@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   root "courses#index"
 
-  get "/students", to: "students#index"
+  get "/courses", to: "courses#index"
+
+  resources :students
 end
