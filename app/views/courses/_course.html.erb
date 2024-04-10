@@ -1,10 +1,22 @@
-<% @courses.each do |course| %>
-    <p>
-        Room number:
-        <%= course.room_number %> <br>
-        Title:
-        <%= course.title %> <br>
-        Description:
-        <%= course.description %>
-    </p>
-<% end %>
+<div class="container">
+    <div class="row">
+        <% @courses.each do |course| %>
+            <div class="col-6">
+                <div class="card mb-4 text-bg-secondary">
+                    <div class="card-header" id="course">
+                        <h5>
+                            <%= course.room_number %>: <%= course.title %>
+                        </h5>
+                        <p class="card-text">
+                            <%= course.description %>
+                        </p>
+                    </div>
+                    <div class="card-body">
+                        <a href="#" class="btn link-warning">ENROLL</a>
+                        <a href="#" class="btn link-warning">INFO</a>
+                    </div>
+                </div>
+            </div>
+        <% end %>
+    </div>
+</div>
